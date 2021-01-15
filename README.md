@@ -24,7 +24,7 @@ for e in range(episodes)
   7.2 set minibatch as random( memory, min( len(memory), batch_size ) )   
   7.3 for state action reward next_stete done in minibatch:   
     7.4 y_target(action) = reward if is done    
-        y_target(action) = reward + gamma * model.predict(next_state)   
+        else:   y_target(action) = reward + gamma * model.predict(next_state)   
     7.5 x_batch append state and y_batch append y_target    
   7.6 model.fit( x, y, batch_size = len(x_batch), verbose = 0 )   
   
