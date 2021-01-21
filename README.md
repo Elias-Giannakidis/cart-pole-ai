@@ -1,10 +1,10 @@
 # Cart-pole-AI
 
-This is a try to solve Cart-pole AI problef     
+This is a try to solve Cart-pole AI problem         
 with simply q-learning and    
 because the problem has a lot of complexity     
 there is a second code which solve this with    
-deep q-learning algorithm   
+deep q-learning algorithm.   
     
 # Algorithm.    
     
@@ -13,13 +13,13 @@ for e in range(episodes)
       
   while not done:   
     2.get epsilon according max( epsilon_min, min(epsilon, 1 - log10(episode + 1) * epsilon_decay ) )   
-    3.epsilon% get a random action else:      
+    3.(epsilon %) get a random action else:      
       action = model.predict(state)   
     4. do the action and get ( next_state, reward, done )   
     5. save(state, action, reward, next_state, done)    
     6. state = new_state    
       
-  7.if not optimize, train the model like this...   
+  7.if not optimize, train the model as below. 
   7.1 reset x_batch and y_batch   
   7.2 set minibatch as random( memory, min( len(memory), batch_size ) )   
   7.3 for state action reward next_stete done in minibatch:   
