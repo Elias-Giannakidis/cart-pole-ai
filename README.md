@@ -19,7 +19,7 @@ for e in range(episodes)
     5. save(state, action, reward, next_state, done)    
     6. state = new_state    
       
-  7.if not optimize, train the model as below. 
+  7.0 if not optimize, train the model as below.       
   7.1 reset x_batch and y_batch   
   7.2 set minibatch as random( memory, min( len(memory), batch_size ) )   
   7.3 for state action reward next_stete done in minibatch:   
